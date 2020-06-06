@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h1>SAILS SOCKET-CRON</h1>
+    </nav>
+    <div class="row">
+        <div class="col-6">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h1>SOCKET CLIENT</h1>
+                </div>
+                <div class="panel-body">
+                    <button class="btn btn-outline-primary mr-5" (click)="startTimer(5)">5 Seconds</button>
+                    <button class="btn btn-outline-primary mr-5" (click)="startTimer(10)">10 Seconds</button>
+                    <button class="btn btn-outline-primary" (click)="startTimer(20)">20 Seconds</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h1>SOCKET SERVER</h1>
+                </div>
+                <div class="panel-body">
+                    <h2>Timer: {{time||0}}</h2>
+                    <h3>SOCKET IS <span [ngClass]="auction=='Live'?'text-success':'text-danger'">{{auction}}</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
